@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | FishCatch</title>
+
+    <!-- CDNs -->
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../public/css/main.css">
+</head>
+<body>
+    <div class="container-fluid p-0 min-vh-100">
+        <!-- NAVIGATION BAR SECTION -->
+        <nav class="navbar navbar-expand-lg bg-primary-subtle">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../public/images/fishcatch-logo.png" alt="FishCatch's Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    FishCatch
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About MunFish</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Plans</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FARMC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Publication</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More about Fisheries
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Municipal Fisheries Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Fisheries Ordinance and Issuance</a></li>
+                                <li><a class="dropdown-item" href="#">Fisheries Compliance</a></li>
+                                <li><a class="dropdown-item" href="#">Fish Catch</a></li>
+                                <li><a class="dropdown-item" href="#">Fisheries Violation</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- MAIN CONTENT SECTION -->
+        <div class="container py-lg-5">
+            <div class="row align-items-center py-md-5">
+                <div class="col-6 px-5">
+                    <h2 class="display-1">MunFish Database</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci eum amet vitae praesentium eligendi beatae dolores voluptates dolore nisi aperiam!</p>
+                </div>
+                <div class="col-6 d-flex p-4 justify-content-center">
+                    <div class="card w-60 shadow">
+                        <div class="card-body">
+                            <h5>Login as Administrator</h5>
+                            <hr>
+                            <div class="mb-2">
+                                <label for="username" class="form-label">Username:</label>
+                                <input id="username" type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input id="password" type="password" class="form-control">
+                            </div>
+                            <a href="dashboard.html"><button type="submit" class="btn btn-primary w-100">Login</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER SECTION -->
+        <div class="container-fluid bg-primary-subtle">
+            <div class="row">
+                <div class="col-5 ">
+                    <div class="row p-2">
+                        <div class="col-5">
+                            <div class="ms-md-5">
+                                <img src="../public/images/fishcatch-logo.png" alt="FishCatch's Logo" width="100" class="d-inline-block align-text-top">
+                                <h2>FishCatch</h2>
+                            </div>
+                        </div>
+                        <div class="col-7 d-flex align-items-center border-left-gray">
+                            <h6 class="display-6">World Wildlife Fund Philippines</h6>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-7">
+                    <div class="row h-100">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <div class="w-60 text-center">
+                                <div class="mb-1">
+                                    <a class="text-decoration-none" href="#"><i class="fa-brands fa-square-facebook"></i> World Wildlife Fund Philippines</a>
+                                </div>
+                                <hr>
+                                <div class="mt-2">
+                                    <h6 class="fw-lighter">All Rights Reserve &copy; 2023</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FONTAWESOME CDN -->
+    <script src="https://kit.fontawesome.com/a7504709e0.js" crossorigin="anonymous"></script>
+</body>
+</html>

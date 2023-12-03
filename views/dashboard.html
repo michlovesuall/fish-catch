@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CDNs -->
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- DATATABLES CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../public/css/main.css">
+
+    <title>Dashboard | FishCatch</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row min-vh-100">
+            <!-- DASHBOARD SIDEBAR -->
+            <div class="col-3 bg-primary-subtle ">
+                <div class="container pt-2">
+                    <h6 class="display-6 fs-3 m-0">
+                        <img width="70" src="../public/images/fishcatch-logo.png" alt="FishCatch's Logo">
+                        FishCatch
+                    </h6>
+                </div>
+                <hr class="mt-1">
+                <div class="container">
+                  <div class="accordion" id="accordionDashboard">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Lagonoy Gulf Areas
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionDashboard">
+                        <div class="accordion-body">
+                          <!-- ACCORDION 1 BODY -->
+                          <p><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                            Provinces
+                          </a></p>
+                          <p><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                            Municipalities
+                          </a></p>
+                          <p><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                            Coastal Barangays
+                          </a></p>
+                          <p><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                            Fisherfolks
+                          </a></p>
+                          <p><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                            Fishing Boats
+                          </a></p>
+                          <p><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                            Fishing Gears
+                          </a></p>
+                          <p><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                            CFLC
+                          </a></p>
+                          <p><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                            Major Tuna Landing Sites
+                          </a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Livelihood
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionDashboard">
+                        <div class="accordion-body">
+                          <!-- ACCORDION 2 BODY -->
+                          <p><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                            Capture Fishing
+                          </a></p>
+                          <p><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                            Aquaculture
+                          </a></p>
+                          <p><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                            Mariculture
+                          </a></p>
+                          <p><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                            Fish Vending
+                          </a></p>
+                          <p><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
+                            Others
+                          </a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- DASHBOARD CONTENT -->
+            <div class="col-9">
+              <div class="row p-2">
+                <div class="col-6">
+                  <div class="d-flex">
+                    <p class="display-6 fs-4 m-0 p-2" id="dashboard-header">Dashboard</p>
+                    <button type="button" id="reset-dashboard" class="btn btn-primary btn-sm d-none">Back</button>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="container h-100 d-flex justify-content-end align-items-center">
+                    <p class="display-6 fs-6 me-4 mb-0">Administrator</p>
+                    <a href="landingpage.html"><button class="btn btn-danger" type="button"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></a>
+                  </div>
+                </div>
+              </div>
+              <hr class="mt-1">
+              <div class="row">
+                <div class="col-12" id="table-containers">
+                  <div class="row">
+                    <div class="col-4 p-4">
+                      <div class="card shadow h-100">
+                        <div class="card-body">
+                          <span class="badge text-bg-primary">Registered Fisherfolks</span>
+                          <table id="test-table" class="table table-hover mt-3 text-center">
+                            <thead>
+                              <tr>
+                                <th>Category</th>
+                                <th>Total</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="pointer reg-fishfolk-row">
+                                <td class="category">Male</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer reg-fishfolk-row">
+                                <td class="category">Female</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer reg-fishfolk-row">
+                                <td class="category">PWD</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer reg-fishfolk-row">
+                                <td class="category">IPs</td>
+                                <td>1000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 p-4">
+                      <div class="card shadow h-100">
+                        <div class="card-body">
+                          <span class="badge text-bg-primary">Registered Fishing Gears</span>
+                          <table class="table table-hover mt-3 text-center">
+                            <thead>
+                              <tr>
+                                <th>Type</th>
+                                <th>No. of Units</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="pointer reg-fishing-gears-row">
+                                <td class="category">Type 1</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer reg-fishing-gears-row">
+                                <td class="category">Type 2</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer reg-fishing-gears-row">
+                                <td class="category">Type 3</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer reg-fishing-gears-row">
+                                <td class="category">Type 4</td>
+                                <td>1000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 p-4">
+                      <div class="card shadow h-100">
+                        <div class="card-body">
+                          <span class="badge text-bg-primary">Registered Fishing Boats</span>
+                          <table class="table table-hover mt-3 text-center">
+                            <thead>
+                              <tr>
+                                <th>Category</th>
+                                <th>Total</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="pointer reg-fishing-boats-row">
+                                <td class="category">Motorized</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer reg-fishing-boats-row">
+                                <td class="category">Non-motorized</td>
+                                <td>1000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 p-4">
+                      <div class="card shadow h-100">
+                        <div class="card-body">
+                          <span class="badge text-bg-primary">Age Bracket</span>
+                          <table id="test-table" class="table table-hover mt-3 text-center">
+                            <thead>
+                              <tr>
+                                <th>Bracket</th>
+                                <th>Total</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="pointer age-bracket">
+                                <td class="category">18-30</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer age-bracket">
+                                <td class="category">31-40</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer age-bracket">
+                                <td class="category">41-50</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer age-bracket">
+                                <td class="category">51 Up</td>
+                                <td>1000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 p-4">
+                      <div class="card shadow h-100">
+                        <div class="card-body">
+                          <span class="badge text-bg-primary">Educational Attainement</span>
+                          <table id="test-table" class="table table-hover mt-3 text-center">
+                            <thead>
+                              <tr>
+                                <th>Attainment</th>
+                                <th>Total</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="pointer ed-attainment">
+                                <td class="category">Elementary</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer ed-attainment">
+                                <td class="category">High School</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer ed-attainment">
+                                <td class="category">Vocational</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer ed-attainment">
+                                <td class="category">College</td>
+                                <td>1000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 p-4">
+                      <div class="card shadow h-100">
+                        <div class="card-body">
+                          <span class="badge text-bg-primary">No. of Children Among Registered Fisherfolks</span>
+                          <table id="test-table" class="table table-hover mt-3 text-center">
+                            <thead>
+                              <tr>
+                                <th>Bracket</th>
+                                <th>Total</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="pointer no-children">
+                                <td class="category">0-3</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer no-children">
+                                <td class="category">4-5</td>
+                                <td>1000</td>
+                              </tr>
+                              <tr class="pointer no-children">
+                                <td class="category">6-10</td>
+                                <td>1000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 p-4">
+                      <div class="card shadow h-100">
+                        <div class="card-body">
+                          <span class="badge text-bg-primary">Major Bodies of Water</span>
+                          <table class="table table-hover mt-3 text-center">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Location</th>
+                                <th>Type</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="pointer">
+                                <td>Sample 1</td>
+                                <td>Location 1</td>
+                                <td>Type 1</td>
+                              </tr>
+                              <tr class="pointer">
+                                <td>Sample 2</td>
+                                <td>Location 2</td>
+                                <td>Type 2</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 p-4">
+                      <div class="card shadow h-100">
+                        <div class="card-body">
+                          <span class="badge text-bg-primary">Fish Sanctuary & Marine Reserve Marine Protected Areas</span>
+                          <table class="table table-hover mt-3 text-center">
+                            <thead>
+                              <tr>
+                                <th>Location/Name</th>
+                                <th>Area</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="pointer">
+                                <td>Fish Sanctuary 1</td>
+                                <td>Area 1</td>
+                              </tr>
+                              <tr class="pointer">
+                                <td>Fish Sanctuary 2</td>
+                                <td>Area 2</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- TABLE QUERY CONTAINER -->
+              <div class="row">
+                <div id="table-query-container" class="container"></div>
+              </div>  
+            </div>
+        </div>
+    </div>
+    
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FONTAWESOME CDN -->
+    <script src="https://kit.fontawesome.com/a7504709e0.js" crossorigin="anonymous"></script>
+
+    <!-- DATATABLES JS -->
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="../public/js/dashboard.js"></script>
+</body>
+</html>
