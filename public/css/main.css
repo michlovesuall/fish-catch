@@ -17,3 +17,25 @@
 .pointer {
     cursor: pointer;
 }
+
+.user-buttons-guest {
+    background-color: #14A44D;
+}
+
+.user-buttons-cm {
+    background-color: #E4A11B;
+}
+
+.user-buttons-cc {
+    background-color: #3B71CA;
+}
+
+.user-buttons-a {
+    background-color: #DC4C64;
+}
+
+.user-buttons:hover {
+    background-color: #332D2D;
+    color: white;
+    transition: .2s linear all;
+}

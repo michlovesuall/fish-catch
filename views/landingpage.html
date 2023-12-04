@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-lg bg-primary-subtle">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="../public/images/fishcatch-logo.png" alt="FishCatch's Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    <img src="../public/images/fishcatch-logo.png" alt="FishCatch's Logo" width="30" class="d-inline-block align-text-top">
                     FishCatch
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,16 +61,16 @@
             </div>
         </nav>
         <!-- MAIN CONTENT SECTION -->
-        <div class="container py-lg-5">
-            <div class="row align-items-center py-md-5">
+        <div class="container py-lg-1 ">
+            <div class="row align-items-center py-lg-1">
                 <div class="col-6 px-5">
-                    <h2 class="display-1">MunFish Database</h2>
+                    <h2 class="display-1">FishCatch</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci eum amet vitae praesentium eligendi beatae dolores voluptates dolore nisi aperiam!</p>
                 </div>
                 <div class="col-6 d-flex p-4 justify-content-center">
-                    <div class="card w-60 shadow">
+                    <div class="card w-75 shadow">
                         <div class="card-body">
-                            <h5>Login as Administrator</h5>
+                            <h5 id="form-header">Login as Administrator</h5>
                             <hr>
                             <div class="mb-2">
                                 <label for="username" class="form-label">Username:</label>
@@ -80,8 +80,18 @@
                                 <label for="password" class="form-label">Password</label>
                                 <input id="password" type="password" class="form-control">
                             </div>
-                            <a href="dashboard.html"><button type="submit" class="btn btn-primary w-100">Login</button></a>
+                            <button id="login-btn" type="button" class="btn btn-primary w-100">Login</button>
+                            <div class=" d-flex flex-column mt-2 align-items-center p-1">
+                                <p class="display-6 fs-6 m-0">Select User:</p>
+                                <div class="mt-1" id="user-button-groups">
+                                    <div data-key="1" class="badge pointer user-buttons user-buttons-cc">Content Creator</div>
+                                    <div data-key="2" class="badge pointer user-buttons user-buttons-cm">Content Moderator</div>
+                                    <div data-key="3" class="badge pointer user-buttons user-buttons-guest">Guest</div>
+                                    <div data-key="4" class="badge pointer user-buttons user-buttons-a d-none">Administrator</div>
+                                </div>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -125,5 +135,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FONTAWESOME CDN -->
     <script src="https://kit.fontawesome.com/a7504709e0.js" crossorigin="anonymous"></script>
+    <!-- CUSTOM JS -->
+    <script src="../public/js/landingpage.js"></script>
 </body>
 </html>
