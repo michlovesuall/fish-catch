@@ -17,26 +17,72 @@
     <title>Create | FishCatch</title>
 </head>
 <body>
-    <div class="container-fluid min-vh-100 p-0">
-        <nav class="navbar navbar-expand-lg bg-primary-subtle">
-            <div class="container-fluid">
-                <div class="col-6">
-                    <a class="navbar-brand" href="#">
-                        <img src="../public/images/fishcatch-logo.png" alt="FishCatch's Logo" width="30" class="d-inline-block align-text-top">
-                        FishCatch
-                    </a>
+    <div class="container-fluid">
+        <div class="row min-vh-100">
+            <!-- DASHBOARD SIDEBAR -->
+            <div class="col-3 bg-primary-subtle ">
+                <div class="container p-1">
+                    <div class="m-0 p-1 d-flex mt-1 align-items-center ">
+                        <img class="me-2" width="40" src="../public/images/fishcatch-logo.png" alt="FishCatch's Logo">
+                        <h6 class="display-6 fs-3 m-0">FishCatch</h6>
+                    </div>
                 </div>
-                <div class="col-6 d-flex justify-content-end align-items-center">
-                    <p class="display-6 fs-6 me-2 mb-0">Content Creator</p>
-                    <a href="landingpage.html"><button class="btn btn-sm btn-danger me-4" type="button"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></a>
+                <hr class="mt-1">
+                <div class="container">
+                    <div class="accordion" id="accordionDashboard">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Lagonoy Gulf Areas
+                            </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionDashboard">
+                                <div class="accordion-body">
+                                <!-- ACCORDION 1 BODY -->
+                                
+                                </div>
+                            </div>
+                        </div>
+                    <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Livelihood
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionDashboard">
+                                <div class="accordion-body">
+                                <!-- ACCORDION 2 BODY -->
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-        <div class="row">
-            <div class="col-12">
-                <!-- CONTENT CREATOR DISPLAY -->
+            <!-- DASHBOARD CONTENT -->
+            <div class="col-9">
+                <div class="row p-2">
+                    <div class="col-6">
+                        <div class="d-flex">
+                            <p class="display-6 fs-4 m-0 p-2" id="dashboard-header">Dashboard</p>
+                            <button type="button" id="reset-dashboard" class="btn btn-primary btn-sm d-none">Back</button>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="container h-100 d-flex justify-content-end align-items-center">
+                            <p class="display-6 fs-6 me-4 mb-0">Content Creator</p>
+                            <a href="landingpage.html"><button class="btn btn-sm btn-danger" type="button"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="mt-1">
+                <div class="row">
+                    <!-- CONTENT HERE!! -->
 
 
+
+
+                </div>
             </div>
         </div>
     </div>
