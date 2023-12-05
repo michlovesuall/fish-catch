@@ -14,7 +14,7 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="../public/css/main.css">
 
-    <title>Settings | FishCatch</title>
+    <title>Forms | FishCatch</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -33,7 +33,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                             <button class="accordion-button bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Lagonoy Gulf Areas
+                            Accordion 1
                             </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionDashboard">
@@ -46,7 +46,7 @@
                     <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Livelihood
+                                Accordion 2
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionDashboard">
@@ -78,10 +78,57 @@
                 <hr class="mt-1">
                 <div class="row">
                     <!-- CONTENT HERE!! -->
-
-
-
-                    
+                    <div class=".container p-3">
+                        <div class="col-12 p-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <h3 class="text-uppercase">forms</h3>
+                                    </div>
+                                    <hr>
+                                    <table id="forms-table" class="table table-hover">
+                                        <thead>
+                                            <tr class="text-center">
+                                                <th>Type</th>
+                                                <th>Date Submitted</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Fisherfolk Registration</td>
+                                                <td>Sample Date</td>
+                                                <td><span class="badge text-bg-warning">Pending</span></td>
+                                                <td class="text-center">
+                                                    <button class="btn btn-sm btn-primary">Edit</button>
+                                                    <button class="btn btn-sm btn-danger">Delete</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>CSAT</td>
+                                                <td>Sample Date</td>
+                                                <td><span class="badge text-bg-success">Verified</span></td>
+                                                <td class="text-center">
+                                                    <button class="btn btn-sm btn-primary">Edit</button>
+                                                    <button class="btn btn-sm btn-danger">Delete</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>CSAT</td>
+                                                <td>Sample Date</td>
+                                                <td><span class="badge text-bg-danger">Denied</span></td>
+                                                <td class="text-center">
+                                                    <button class="btn btn-sm btn-primary">Edit</button>
+                                                    <button class="btn btn-sm btn-danger">Delete</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,5 +137,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FONTAWESOME CDN -->
     <script src="https://kit.fontawesome.com/a7504709e0.js" crossorigin="anonymous"></script>
+
+    <!-- DATATABLES JS -->
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="../public/js/contentmoderator.js"></script>
 </body>
 </html>

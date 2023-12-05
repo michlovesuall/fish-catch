@@ -39,3 +39,12 @@
     color: white;
     transition: .2s linear all;
 }
+
+.dt-buttons .btn {
+    background-color:  #3B71CA;
+    border: none;
+}
+
+.dt-buttons .btn:hover {
+    background-color:  #1a4ea1;
+}
