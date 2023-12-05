@@ -4,6 +4,13 @@ $(document).ready(function () {
     const formHeader = $('#form-header');
     const loginBtn = $('#login-btn');
     let formState = 4;
+    const guestBtn = $('#guest-btn');
+
+    guestBtn.click( function () {
+
+        location.href = '../../views/guestview.html';
+
+    });
 
     $.each(userButtons, function (index, item) {
 

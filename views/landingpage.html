@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome | FishCatch</title>
+    <title>Welcome | CATCHFISH</title>
 
     <!-- CDNs -->
     <!-- JQUERY -->
@@ -14,6 +14,31 @@
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="../public/css/main.css">
+
+    <style>
+        #img-bg{
+            position: absolute;
+            z-index: -1;
+            left: -12.5rem;
+            scale: .7;
+        }
+
+        /* #img-container {
+            background: rgb(221,221,221);
+            background: radial-gradient(circle, rgba(221,221,221,.4) 100%, rgba(120,120,120,.4) 100%);
+
+        } */
+
+        .text-shadow {
+            text-shadow: 2px 4px  #ffffff;
+        }
+
+        .text-shadow1 {
+            text-shadow: 1px 2px  #919090;
+        }
+
+    </style>
+
 </head>
 <body>
     <div class="container-fluid p-0 min-vh-100">
@@ -21,10 +46,10 @@
         <nav class="navbar navbar-expand-lg bg-primary-subtle">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="../public/images/fishcatch-logo.png" alt="FishCatch's Logo" width="30" class="d-inline-block align-text-top">
-                    FishCatch
+                    <img src="../public/images/CATCHFISH-logo.png" alt="CATCHFISH's Logo" width="30" class="d-inline-block align-text-top">
+                    CATCHFISH
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -57,15 +82,20 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </nav>
         <!-- MAIN CONTENT SECTION -->
-        <div class="container py-lg-4 ">
+        <div class="container py-lg-4 position-relative">
+            <img id="img-bg" class="img-fluid" src="../public/images/CATCHFISH.png" alt="">
+            <div class="row">
+                <h3 class="display-4 fw-bolder fs-4 text-primary"><strong>C</strong>ollaborative <strong>A</strong>ccess to <strong>T</strong>racking <strong>C</strong>ommunity  <strong>H</strong>andling <strong>F</strong>isheries <strong>I</strong>nformation, <strong>S</strong>cience and <strong>H</strong>arvest</h3>
+                <p>Innovative digital repository that accurately record information about the fisheries community, fishing resources, and fish catch along the coastline of Lagonoy Gulf.</p>
+            </div>
             <div class="row align-items-center py-lg-4">
-                <div class="col-6 px-5">
-                    <h2 class="display-1">FishCatch</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci eum amet vitae praesentium eligendi beatae dolores voluptates dolore nisi aperiam!</p>
+                <div id="img-container" class="col-6 px-5">
+                    <!-- <h2 class="text-shadow display-1 fw-bolder text-primary">CATCHFISH</h2> -->
+                    <!-- <p class="bg-body-tertiary  p-1 rounded-1 ">Innovative digital repository that accurately record information about the fisheries community, fishing resources, and fish catch along the coastline of Lagonoy Gulf.</p> -->
                 </div>
                 <div class="col-6 d-flex p-4 justify-content-center">
                     <div class="card w-75 shadow">
@@ -86,12 +116,11 @@
                                 <div class="mt-1" id="user-button-groups">
                                     <div data-key="1" class="badge pointer user-buttons user-buttons-cc">Content Creator</div>
                                     <div data-key="2" class="badge pointer user-buttons user-buttons-cm">Content Moderator</div>
-                                    <div data-key="3" class="badge pointer user-buttons user-buttons-guest">Guest</div>
+                                    <div data-key="3" id="guest-btn" class="badge pointer user-buttons user-buttons-guest">Guest</div>
                                     <div data-key="4" class="badge pointer user-buttons user-buttons-a d-none">Administrator</div>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -103,8 +132,8 @@
                     <div class="row p-2">
                         <div class="col-5">
                             <div class="ms-md-5">
-                                <img src="../public/images/fishcatch-logo.png" alt="FishCatch's Logo" width="100" class="d-inline-block align-text-top">
-                                <h2>FishCatch</h2>
+                                <img src="../public/images/CATCHFISH-logo.png" alt="CATCHFISH's Logo" width="100" class="d-inline-block align-text-top">
+                                <h2>CATCHFISH</h2>
                             </div>
                         </div>
                         <div class="col-7 d-flex align-items-center border-left-gray">
